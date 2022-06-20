@@ -48,4 +48,73 @@ const automobile2 = {
         console.log('driving');
     }
 };
-console.log(automobile2);
+//console.log(automobile2)
+//classes
+class Tree {
+    constructor(branch, fruits) {
+        this.branch = branch;
+        this.fruits = fruits;
+        this.branch = branch;
+        this.fruits = fruits;
+    }
+    growLeaves(leaves) {
+        console.log(`${leaves} leaves grew`);
+    }
+}
+const tree1 = new Tree('oak', 32);
+console.log(tree1.growLeaves(10));
+//class inheritance
+class Apple extends Tree {
+    constructor(branch, fruits, color) {
+        super(branch, fruits);
+        this.branch = branch;
+        this.fruits = fruits;
+        this.color = color;
+        this.color = color;
+    }
+}
+const apple = new Apple('apple', 10, 'red');
+console.log(apple.growLeaves(10));
+//Abstract classes
+class Fruit {
+    constructor(name, color) {
+        this.name = name;
+        this.color = color;
+        this.name = name;
+        this.color = color;
+    }
+}
+class Banana extends Fruit {
+    constructor(name, color) {
+        super(name, color);
+        this.name = name;
+        this.color = color;
+    }
+    growLeaves(leaves) {
+        console.log(`${leaves} leaves grew`);
+    }
+}
+let Banana1 = new Banana('banana', 'yellow');
+console.log(Banana1.growLeaves(10));
+//Generics
+function displayData(Data) {
+    return Data;
+}
+console.log(displayData('ddd'));
+//class generics
+class GenericClass {
+    constructor(data) {
+        this.data = data;
+        this.data = data;
+    }
+}
+let object1 = new GenericClass('string');
+console.log(object1.data);
+let object2 = new GenericClass(10);
+console.log(object2.data);
+let object3 = new GenericClass(true);
+console.log(object3.data);
+let object4 = new GenericClass({ name: 'John' });
+console.log(object4.data);
+let object5 = new GenericClass('any');
+console.log(object5.data);
