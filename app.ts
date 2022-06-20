@@ -156,3 +156,15 @@ let object4 = new GenericClass<object>({name: 'John'})
 console.log(object4.data)
 let object5 = new GenericClass<any>('any')
 console.log(object5.data)
+
+//namespaces
+namespace MyNamespace {
+    export class MyClass {
+        public name: string;
+        constructor(name: string) {
+            this.name = name;
+        }
+    }
+}
+const mine = new MyNamespace.MyClass('Bassit');
+console.log(mine)

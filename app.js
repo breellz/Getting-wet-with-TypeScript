@@ -118,3 +118,15 @@ let object4 = new GenericClass({ name: 'John' });
 console.log(object4.data);
 let object5 = new GenericClass('any');
 console.log(object5.data);
+//namespaces
+var MyNamespace;
+(function (MyNamespace) {
+    class MyClass {
+        constructor(name) {
+            this.name = name;
+        }
+    }
+    MyNamespace.MyClass = MyClass;
+})(MyNamespace || (MyNamespace = {}));
+const mine = new MyNamespace.MyClass('Bassit');
+console.log(mine);
